@@ -1,7 +1,10 @@
 import {userName} from "../modules/user";
 
 export function getUserDisplayName(name: userName) : string {
-    return `${name.title} ${name.first} ${name.last}`;
+    const title = name?.title ? name.title : '';
+    const first = name?.first ? name.first : '';
+    const last = name?.last ? name.last : '';
+    return `${title} ${first} ${last}`;
 }
 
 export function getUserBirthYear (birthdate:Date) : string {

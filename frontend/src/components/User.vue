@@ -43,7 +43,7 @@
     </div>
     <div class="flex justify-content-end gap-2">
       <Button class="button" type="button" label="Save" severity="primary" @click="handleSave()">Save</Button>
-      <Button v-if="user.isUserSaved" class="button" type="button" label="Delete" severity="secondary" @click="handleSave()">Delete</Button>
+      <Button v-if="user.isUserSaved" class="button" type="button" label="Delete" severity="secondary" @click="handleDelete()">Delete</Button>
       <Button class="button" type="button" label="Cancel"  severity="secondary"  @click="handleCancel()">Cancel</Button>
     </div>
   </Dialog>
@@ -67,7 +67,10 @@ const props = defineProps({
 
 import Dialog from 'primevue/dialog';
 import {getUserDisplayName, getUserBirthYear} from "../utils/user.utils";
+import {useUser} from "../composables/use-users";
 
+
+const { saveUser, deleteUser } = useUser();
 const isDialogVisible = ref(props.visible)
 
 const handleCancel = () => {
@@ -75,6 +78,12 @@ const handleCancel = () => {
 }
 
 const handleSave = () => {
+  saveUser(props.user);
+  isDialogVisible.value = false;
+}
+
+const handleDelete = () => {
+  deleteUser(props.user);
   isDialogVisible.value = false;
 }
 
