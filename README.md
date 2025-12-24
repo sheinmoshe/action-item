@@ -1,10 +1,10 @@
 ## 🚀 Quick Start
 
-### This projecct uses Vue3 with Typescript and jest for testing
-### State was handled using composition API with no extra libraries or framworks
+** This projecct uses Vue3 with Typescript and jest for testing
+** State was handled using composition API with no extra libraries or framworks
 
 
-### For backend I used a JSON file. This is to simply implentation and avoud working with sqlLite that doesn't support object as type
+** For backend I used a JSON file. This is to simply implentation and avoid working with sqlLite that doesn't support object as type
 
 ### Installation
 1. **Clone the repository:**
@@ -37,7 +37,7 @@
 ---
 
 ## Project Structure
-
+```
 ├── backend/        # Backend application
 │   ├── src/        # Source code
 │   └── package.json
@@ -45,4 +45,5 @@
 │   ├── src/        # Source code
 │   └── package.json
 └── README.md
+```
 ---
