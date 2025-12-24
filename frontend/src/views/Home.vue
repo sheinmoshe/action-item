@@ -2,7 +2,7 @@
 	<div class="home">
 		<h1>Home Page</h1>
     <Button class="button" @click="handleUsersFetch" label="Fetch" />
-    <Button class="button" @click="handleHistoryFetch" label="History" />
+    <Button class="button" @click="handleHistoryFetch" label="History"/>
   </div>
 </template>
 

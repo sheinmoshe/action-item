@@ -22,7 +22,14 @@ export interface User {
     };
     phone: string
     email: string;
-    picture: string;
-    age: number;
+    picture: {
+        large: string;
+        medium: string;
+        thumbnail: string;
+    };
+    dob: {
+        age: number;
+        date: Date;
+    };
     isUserSaved?: boolean
 }
